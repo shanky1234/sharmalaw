@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Consultation Dashboard | Bhola Sharma Law Chambers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="theme.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body class="admin-page">
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">⚖</span>
+        <span><strong>Bhola Sharma</strong><small>Law Chambers</small></span>
+      </a>
+      <nav class="main-nav"><a href="index.html">View website</a><a href="index.html#contact" class="nav-button">New consultation <span>↗</span></a></nav>
+    </header>
+
+    <main class="dashboard">
+      <section class="dashboard-heading">
+        <div><p class="eyebrow"><span></span> Local demonstration</p><h1>Consultation <em>dashboard</em></h1><p>New requests are saved locally and this page refreshes automatically every five seconds.</p></div>
+        <div class="live-status"><span></span> Live updates enabled</div>
+      </section>
+
+      <section class="dashboard-summary" aria-label="Consultation summary">
+        <article><span>Total requests</span><strong id="request-count">0</strong></article>
+        <article><span>Latest update</span><strong id="last-update">Waiting for requests</strong></article>
+        <button id="refresh-dashboard" type="button">Refresh now <span>↻</span></button>
+      </section>
+
+      <section class="requests-panel">
+        <div class="requests-heading"><div><p class="section-label"><span>01</span> Incoming requests</p><h2>Client enquiries</h2></div><p id="dashboard-status" aria-live="polite">Loading requests…</p></div>
+        <div class="requests-table-wrap">
+          <table>
+            <thead><tr><th>Received</th><th>Client</th><th>Phone</th><th>Email</th><th>Matter</th><th>Message</th></tr></thead>
+            <tbody id="requests-body"></tbody>
+          </table>
+          <div class="empty-state" id="empty-state" hidden><span>✦</span><h3>No consultation requests yet</h3><p>Submit the form on the website to see a request appear here.</p></div>
+        </div>
+      </section>
+      <p class="demo-note"><strong>Local demo only:</strong> this dashboard is intentionally available only on your computer while the Python server runs. Do not expose an unprotected dashboard publicly.</p>
+    </main>
+
+    <footer><a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true">⚖</span><span><strong>Bhola Sharma</strong><small>Law Chambers</small></span></a><p>© <span id="year"></span> Bhola Sharma Law Chambers.</p><a href="index.html">Website home ↑</a></footer>
+    <script src="script.js?v=slate-copper-beige-2"></script><script src="admin.js"></script>
+  </body>
+</html>

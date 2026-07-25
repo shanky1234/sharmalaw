@@ -1,0 +1,132 @@
+/* Slate-blue, copper, and warm-beige visual theme for Bhola Sharma Law Chambers */
+:root {
+  --ink: #2d4058;
+  --muted: #68798b;
+  --paper: #f3e5d3;
+  --gold: #c47a45;
+  --gold-soft: #e7b18b;
+  --deep: #243850;
+  --sage: #e9e0d2;
+}
+
+body {
+  background: var(--paper);
+}
+
+.announcement {
+  background: linear-gradient(100deg, #192839 0%, #344d69 56%, #59718f 100%);
+}
+
+.site-header {
+  background: rgba(243, 229, 211, .95);
+}
+
+.hero {
+  isolation: isolate;
+  max-width: none;
+  min-height: 650px;
+  padding-left: max(42px, calc((100% - 1196px) / 2));
+  padding-right: max(42px, calc((100% - 1196px) / 2));
+  background:
+    radial-gradient(circle at 78% 10%, rgba(210, 137, 87, .30), transparent 23%),
+    radial-gradient(circle at 18% 93%, rgba(75, 103, 138, .52), transparent 28%),
+    linear-gradient(125deg, #1a2a3d 0%, #2b425e 46%, #506d91 100%);
+}
+
+.hero:before {
+  content: "";
+  position: absolute;
+  inset: 18px max(42px, calc((100% - 1196px) / 2));
+  border: 1px solid rgba(234, 211, 153, .28);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.hero-copy,
+.hero-visual {
+  z-index: 1;
+}
+
+.hero h1 {
+  color: #fffaf0;
+}
+
+.hero h1 em {
+  color: #e8be64;
+}
+
+.hero-text,
+.trust-line p {
+  color: #eadfce;
+}
+
+.button-primary {
+  background: linear-gradient(135deg, #e6b083, #b9683d);
+  color: #273b54;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, .32);
+}
+
+.button-primary:hover {
+  background: linear-gradient(135deg, #f0c8a8, #cc7e4c);
+}
+
+.button-text {
+  color: #fffaf0;
+}
+
+.button-text:hover {
+  color: #efc66f;
+}
+
+.trust-avatars span {
+  border-color: #2a3f5a;
+}
+
+.visual-frame {
+  background: #f3e5d3;
+  box-shadow: 21px 23px 0 #bb7041;
+}
+
+.arch {
+  background: #3a5878;
+}
+
+.orb-one {
+  background: #d58b5a;
+  opacity: .28;
+}
+
+.orb-two {
+  background: #7389a6;
+  opacity: .36;
+}
+
+.credibility {
+  background: #f3e5d3;
+  color: #3d5879;
+}
+
+.service-card.featured,
+.approach,
+footer {
+  background: #243850;
+}
+
+.service-card:hover {
+  background: #efe0ce;
+}
+
+.practice-hero {
+  background: linear-gradient(125deg, #20354f, #587393);
+}
+
+@media (max-width: 800px) {
+  .hero {
+    padding-left: 26px;
+    padding-right: 26px;
+  }
+
+  .hero:before {
+    inset: 12px 14px;
+  }
+}
