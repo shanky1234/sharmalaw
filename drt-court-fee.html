@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Estimate DRT, DRAT and SARFAESI filing fees from published fee schedules." />
+    <title>DRT Court Fee Calculator | Bhola Sharma Law Chambers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="calculator.css?v=calculator-3" />
+  </head>
+  <body class="calculator-page">
+    <div class="announcement">A practical reference tool. <a href="index.html#contact">Request a consultation</a></div>
+    <header class="site-header" id="top">
+      <a class="brand" href="index.html" aria-label="Bhola Sharma Law Chambers home">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 80 80" fill="none"><path d="M40 13v42M23 28h34M18 28l-9 18h18L18 28ZM62 28l-9 18h18L62 28ZM28 64h24M34 55h12" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span><strong>Bhola Sharma</strong><small>Law Chambers</small></span>
+      </a>
+      <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html#about">About</a><a href="index.html#services">Practice Areas</a><a href="drt-court-fee.html" aria-current="page">DRT Fee Calculator</a><a href="index.html#contact" class="nav-button">Consult Now <span>↗</span></a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="calculator-hero">
+        <p class="eyebrow"><span></span> Legal reference tool</p>
+        <div class="calculator-hero-layout">
+          <div><div class="breadcrumb"><a href="index.html">Home</a><span>/</span> DRT Court Fee Calculator</div><h1>DRT, DRAT &amp; <em>SARFAESI</em><br />court-fee calculator.</h1><p>Estimate the filing fee using the published schedules for a DRT Original Application, a DRAT appeal, or a SARFAESI application or appeal.</p></div>
+          <aside class="calculator-disclaimer"><span aria-hidden="true">i</span><p>This is an estimate only. Confirm the current fee, valuation, forum, payment method and any pre-deposit directly with the Registry before filing.</p></aside>
+        </div>
+      </section>
+
+      <section class="calculator-shell" aria-labelledby="calculator-title">
+        <div class="calculator-panel">
+          <div class="section-label"><span>01</span><p>Fee estimate</p></div>
+          <h2 id="calculator-title">Select the filing <em>type.</em></h2>
+          <form id="fee-calculator" novalidate>
+            <label>Forum &amp; application type
+              <select id="forum" name="forum">
+                <option value="drat-appeal">DRAT — Appeal under Section 20 (RDB Act)</option>
+                <option value="drt-oa">DRT — Original Application under Section 19</option>
+                <option value="sarfaesi">DRT / DRAT — SARFAESI Section 17 or Section 18</option>
+              </select>
+            </label>
+            <label id="applicant-row" hidden>Applicant category
+              <select id="applicant-type" name="applicant-type">
+                <option value="borrower">Borrower</option>
+                <option value="other">Aggrieved party other than borrower</option>
+              </select>
+            </label>
+            <label id="amount-label" for="claim-amount">Amount appealed against (₹)
+              <input id="claim-amount" name="claim-amount" inputmode="decimal" autocomplete="off" placeholder="For example: 35,00,000" aria-describedby="amount-help" />
+            </label>
+            <p class="field-help" id="amount-help">For a DRAT appeal, use the amount appealed against. For DRT / SARFAESI, use the relevant claim or debt amount as applicable.</p>
+            <button class="button button-primary calculator-button" type="submit">Calculate filing fee <span>→</span></button>
+          </form>
+        </div>
+
+        <section class="fee-result" aria-live="polite" aria-atomic="true">
+          <p class="result-kicker" id="result-kicker">DRAT — Appeal</p>
+          <p class="result-label">Estimated filing fee</p>
+          <p class="fee-value" id="fee-value">₹—</p>
+          <p class="result-amount" id="result-amount">Enter an amount to calculate.</p>
+          <div class="calculation-breakdown" id="calculation-breakdown">The applicable fee rule will appear here.</div>
+          <p class="registry-note" id="registry-note">The calculator does not determine whether an appeal is maintainable or whether a separate statutory deposit applies.</p>
+        </section>
+      </section>
+
+      <section class="fee-reference section">
+        <div class="section-top"><div class="section-label"><span>02</span><p>Published fee schedules</p></div><p class="section-intro">Use the calculator as a starting point; the Registry remains the final source for fee payment.</p></div>
+        <div class="fee-rule-grid">
+          <article><p class="rule-number">01</p><h3>DRT Original Application</h3><p>Up to ₹10 lakh: ₹12,000. Above ₹10 lakh: ₹12,000 plus ₹1,000 for every additional ₹1 lakh or part thereof, capped at ₹1,50,000.</p><a href="fee-rules.html#rule-7">View Rule 7 details →</a></article>
+          <article><p class="rule-number">02</p><h3>DRAT Appeal</h3><p>Below ₹10 lakh: ₹12,000. ₹10 lakh to below ₹30 lakh: ₹20,000. ₹30 lakh and above: ₹30,000.</p><a href="fee-rules.html#rule-8">View Rule 8 details →</a></article>
+          <article><p class="rule-number">03</p><h3>SARFAESI application / appeal</h3><p>The Rule 13 fee depends on the applicant category and amount of debt due. Borrower and other-aggrieved-party slabs are different.</p><a href="fee-rules.html#rule-13">View Rule 13 details →</a></article>
+        </div>
+      </section>
+
+      <section class="calculator-notice"><strong>Important:</strong> This calculator is general information, not legal advice. Fee schedules, Registry procedures and statutory requirements may change. An appeal may require a separate pre-deposit that is not included in this estimate.</section>
+    </main>
+
+    <footer><a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 80 80" fill="none"><path d="M40 13v42M23 28h34M18 28l-9 18h18L18 28ZM62 28l-9 18h18L62 28ZM28 64h24M34 55h12" stroke="currentColor" stroke-width="4"/></svg></span><span><strong>Bhola Sharma</strong><small>Law Chambers</small></span></a><p>© <span id="year"></span> Bhola Sharma Law Chambers.</p><a href="#top">Back to top ↑</a></footer>
+    <script src="script.js?v=calculator-3"></script>
+    <script src="calculator.js?v=calculator-3"></script>
+  </body>
+</html>

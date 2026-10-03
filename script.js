@@ -1,7 +1,7 @@
 const navigation = document.querySelector('.main-nav');
 let menuButton = document.querySelector('.menu-toggle');
 
-const themeVersion = 'slate-copper-beige-2';
+const themeVersion = 'calculator-2';
 ['theme.css', 'footer.css'].forEach((href) => {
   const versionedHref = `${href}?v=${themeVersion}`;
   if (document.querySelector(`link[href="${href}"]`)) return;

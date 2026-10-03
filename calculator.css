@@ -1,0 +1,84 @@
+.calculator-page {
+  background: var(--paper);
+}
+
+.calculator-hero {
+  padding: 78px max(42px, calc((100% - 1196px) / 2)) 82px;
+  color: #fffaf0;
+  background:
+    radial-gradient(circle at 84% 12%, rgba(210, 137, 87, .28), transparent 20%),
+    linear-gradient(125deg, #1a2a3d 0%, #2b425e 55%, #506d91 100%);
+}
+
+.calculator-hero .eyebrow { color: var(--gold-soft); }
+.calculator-hero .eyebrow span { background: var(--gold-soft); }
+.calculator-hero .breadcrumb { margin-bottom: 24px; color: #dfe5ea; }
+.calculator-hero .breadcrumb a { color: var(--gold-soft); }
+.calculator-hero-layout { display: grid; grid-template-columns: 1fr 320px; gap: 80px; align-items: end; }
+.calculator-hero h1 { max-width: 760px; font-size: clamp(3rem, 5vw, 5.1rem); }
+.calculator-hero h1 em { color: #e5b56e; }
+.calculator-hero-layout > div > p:last-child { max-width: 670px; margin: 28px 0 0; color: #e5e3dd; font-size: 1rem; line-height: 1.75; }
+
+.calculator-disclaimer { display: flex; align-items: flex-start; gap: 13px; padding: 22px; border: 1px solid rgba(240, 220, 185, .4); background: rgba(18, 33, 49, .42); }
+.calculator-disclaimer span { display: grid; flex: 0 0 auto; width: 22px; height: 22px; place-items: center; border: 1px solid var(--gold-soft); border-radius: 50%; color: var(--gold-soft); font-family: Georgia, serif; font-size: .9rem; }
+.calculator-disclaimer p { margin: 0; color: #f0eadf; font-size: .8rem; line-height: 1.65; }
+
+.calculator-shell { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(320px, .9fr); max-width: 1196px; margin: -36px auto 0; box-shadow: 0 22px 55px rgba(30, 43, 60, .12); }
+.calculator-panel { padding: 45px; background: #fbf5eb; }
+.calculator-panel h2 { margin: 17px 0 30px; font-size: clamp(2.1rem, 3.5vw, 3.55rem); line-height: 1.05; letter-spacing: -.045em; font-weight: 500; }
+.calculator-panel h2 em { color: var(--gold); }
+#fee-calculator { display: grid; gap: 20px; }
+#fee-calculator label { color: #3f5368; font-size: .7rem; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; }
+#fee-calculator input, #fee-calculator select { display: block; width: 100%; margin-top: 9px; padding: 15px; border: 1px solid #d7c7b5; background: #fffdf8; color: var(--ink); font: 400 .98rem "DM Sans", Arial, sans-serif; outline-color: var(--gold); }
+#fee-calculator select { appearance: auto; }
+.field-help { margin: -9px 0 0; color: var(--muted); font-size: .78rem; line-height: 1.55; }
+.calculator-button { justify-self: start; border: 0; margin-top: 4px; cursor: pointer; }
+
+.fee-result { display: flex; min-height: 100%; flex-direction: column; justify-content: center; padding: 45px; background: var(--deep); color: #fffaf0; }
+.result-kicker { margin: 0 0 30px; color: var(--gold-soft); font-size: .75rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+.result-label { margin: 0; color: #d9e0e4; font-size: .8rem; text-transform: uppercase; letter-spacing: .11em; }
+.fee-value { margin: 9px 0; color: #f3d5a0; font-family: "Playfair Display", Georgia, serif; font-size: clamp(3rem, 6vw, 5.25rem); letter-spacing: -.06em; line-height: 1; }
+.result-amount { margin: 0 0 24px; color: #e5e8e7; font-size: .88rem; }
+.calculation-breakdown { padding: 18px 0; border-top: 1px solid rgba(243, 217, 169, .32); border-bottom: 1px solid rgba(243, 217, 169, .32); color: #edf0ec; font-size: .83rem; line-height: 1.65; }
+.registry-note { margin: 21px 0 0; color: #c9d3d5; font-size: .75rem; line-height: 1.6; }
+
+.fee-reference { padding-top: 100px; }
+.fee-rule-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.fee-rule-grid article { min-height: 278px; padding: 28px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: #faf4e9; }
+.fee-rule-grid article:nth-child(2) { background: #f3e7d6; }
+.rule-number { margin: 0 0 28px; color: var(--gold); font-size: .72rem; font-weight: 700; }
+.fee-rule-grid h3 { font-size: 1.45rem; font-weight: 500; }
+.fee-rule-grid article > p:not(.rule-number) { color: var(--muted); font-size: .83rem; line-height: 1.65; }
+.fee-rule-grid a { color: var(--ink); font-size: .76rem; font-weight: 700; text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 5px; }
+.calculator-notice { max-width: 1196px; margin: 0 auto 110px; padding: 21px 25px; border-left: 3px solid var(--gold); background: #f1e4d3; color: #536276; font-size: .82rem; line-height: 1.65; }
+.calculator-notice strong { color: var(--ink); }
+
+.rule-details { max-width: 1196px; margin: 0 auto; padding: 92px 0 110px; }
+.rule-details-intro { max-width: 740px; margin: 17px 0 44px; color: var(--muted); font-size: .98rem; line-height: 1.75; }
+.rule-detail { scroll-margin-top: 30px; padding: 38px; border: 1px solid var(--line); background: #fbf5eb; }
+.rule-detail + .rule-detail { border-top: 0; }
+.rule-detail:nth-of-type(odd) { background: #f4e8d7; }
+.rule-detail:target { position: relative; z-index: 1; outline: 3px solid var(--gold); outline-offset: -3px; }
+.rule-detail .rule-number { margin-bottom: 13px; }
+.rule-detail h2 { margin: 0 0 14px; font-size: clamp(2rem, 3.8vw, 3.5rem); font-weight: 500; }
+.rule-detail > p { max-width: 825px; color: var(--muted); font-size: .9rem; line-height: 1.7; }
+.schedule-table { width: 100%; margin: 26px 0; border-collapse: collapse; color: var(--ink); font-size: .86rem; }
+.schedule-table th, .schedule-table td { padding: 16px; border: 1px solid #d9c9b7; text-align: left; vertical-align: top; line-height: 1.55; }
+.schedule-table th { background: #e9d4b8; color: #344b61; font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; }
+.rule-source { display: inline-flex; margin-top: 4px; color: var(--ink); font-size: .78rem; font-weight: 700; text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 5px; }
+
+@media (max-width: 800px) {
+  .calculator-hero { padding: 55px 26px 72px; }
+  .calculator-hero-layout, .calculator-shell { display: block; }
+  .calculator-hero-layout { margin-top: 25px; }
+  .calculator-disclaimer { margin-top: 30px; }
+  .calculator-shell { margin: -28px 26px 0; }
+  .calculator-panel, .fee-result { padding: 28px 24px; }
+  .fee-result { min-height: 350px; }
+  .fee-reference { padding: 78px 26px; }
+  .fee-rule-grid { grid-template-columns: 1fr; }
+  .calculator-notice { margin: 0 26px 78px; }
+  .rule-details { padding: 72px 26px 78px; }
+  .rule-detail { padding: 28px 22px; }
+  .schedule-table { display: block; overflow-x: auto; }
+}
